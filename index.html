@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notatki</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css"
+        integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=Montserrat&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="menu">
+        <h1><i class="fas fa-sticky-note"></i> MyNotes</h1>
+        <div class="menu-buttons">
+            <button class="add icon"><i class="fas fa-plus"></i> Dodaj</button>
+            <button class="delete-all icon"><i class="fas fa-trash-alt"></i> Usuń wszystkie</button>
+        </div>
+    </div>
+    <div class="note-area">
+        <!-- <div class="note">
+            <div class="note-header">
+                <h3 class="note-title">Notatka #1</h3>
+                <div class="edit">
+                    <button class="delete-note">
+                        <i class="fas fa-times icon"></i>
+                    </button>
+                    <button class="edit-note">
+                        <i class="fas fa-edit icon"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="note-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur magnam suscipit aspernatur
+                aliquid, pariatur animi inventore similique non asperiores voluptatibus. Nemo voluptates amet aspernatur
+                rem ipsa illum enim cum incidunt!
+            </div>
+            <button class="accept">
+                <i class="fas fa-check icon"></i>
+            </button>
+        </div> -->
+    </div>
+    <div class="note-panel">
+        <h2>Dodaj notatkę</h2>
+        <label for="category">Wybierz kategorię</label>
+        <select id="category" onchange="selectValue()">
+            <option value="0" disabled selected>- wybierz kategorię - </option>
+            <option value="1">Zakupy</option>
+            <option value="1">Praca</option>
+            <option value="1">Dom</option>
+            <option value="1">Inne</option>
+        </select>
+        <label for="text">Wpisz treść notatki</label>
+        <textarea id="text"></textarea>
+        <p class="error">Uzupełnij wszystkie pola!</p>
+        <div class="panel-buttons">
+            <button class="save icon"><i class="fas fa-save"></i> Zapisz</button>
+            <button class="cancel icon"><i class="far fa-window-close"></i> Anuluj</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
