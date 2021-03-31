@@ -1,137 +1,177 @@
 * {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
-    height: 100vh;
-    background-color: rgb(243, 243, 243);
+  height: 100vh;
+  background-color: rgb(243, 243, 243);
 }
 
 .menu {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px;
-    height: 120px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+  height: 120px;
 }
 
 .menu button,
 .note-panel .save,
 .note-panel .cancel {
-    padding: 12px 25px;
-    background: none;
-    border: 1px solid #999;
-    border-radius: 1px;
-    font-size: 14px;
-    cursor: pointer;
-    transition: background-color .3s, color .3s;
+  padding: 12px 25px;
+  background: none;
+  border: 1px solid #999;
+  border-radius: 1px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 .menu button:hover,
 .note-panel .save:hover,
 .note-panel .cancel:hover {
-    background-color: #333;
-    color: #ddd;
+  background-color: #333;
+  color: #ddd;
 }
 
 .icon {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 .add {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 .note-area {
-    display: flex;
-    align-items: start;
-    flex-wrap: wrap;
-    padding: 20px;
+  display: flex;
+  align-items: start;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
 .note {
-    margin: 40px 20px;
-    width: 240px;
-    background-color: rgb(255, 243, 0);
-    border: 1px solid black;
+  margin: 40px 20px;
+  width: 240px;
+  background-color: rgb(255, 243, 0);
+  border: 1px solid black;
 }
 
 .note-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px;
-    background-color: rgba(0, 0, 0, .06);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.06);
 }
 
 .delete-note,
 .edit-note,
 .accept {
-    background: none;
-    font-size: 20px;
-    border: none;
-    cursor: pointer;
+  background: none;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
 }
 
 .fa-times,
 .fa-edit {
-    margin: 0 2px;
+  margin: 0 2px;
 }
 
 .note-body {
-    padding: 20px 15px;
-    font-size: 14px;
-    overflow-wrap: break-word;
+  padding: 20px 15px;
+  font-size: 14px;
+  overflow-wrap: break-word;
 }
 
 .accept {
-    display: none;
-    position: relative;
-    left: 210px;
+  display: none;
+  position: relative;
+  left: 210px;
 }
 
 .note-panel {
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 40px 0;
-    width: 600px;
-    background-color: #fff;
-    box-shadow: 0 0 10px black;
-    border-radius: 5px;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px 0;
+  width: 600px;
+  background-color: #fff;
+  box-shadow: 0 0 10px black;
+  border-radius: 5px;
 }
 
 .note-panel h2 {
-    margin-bottom: 20px;
-    text-transform: uppercase;
+  margin-bottom: 20px;
+  text-transform: uppercase;
 }
 
 .note-panel label {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .note-panel #text,
 .note-panel #category {
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    width: 100%;
-    max-width: 90%;
-    max-height: 600px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid black;
+  margin-bottom: 20px;
+  padding: 10px 20px;
+  width: 100%;
+  max-width: 90%;
+  max-height: 600px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid black;
 }
 
 .note-panel .error {
-    margin-bottom: 20px;
-    color: red;
-    visibility: hidden;
+  margin-bottom: 20px;
+  color: red;
+  visibility: hidden;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .menu-buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 10px;
+  }
+
+  .note-area {
+    justify-content: center;
+  }
+
+  .note {
+    margin: 20px 20px;
+  }
+
+  .note-panel {
+    width: 95%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .note-area {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .note-area {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 1023px) and (orientation: landscape) {
+  .note-panel {
+    height: 95%;
+    width: 95%;
+  }
 }
